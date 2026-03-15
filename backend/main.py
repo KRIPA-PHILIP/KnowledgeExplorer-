@@ -1,0 +1,25 @@
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from routers import articles, ask
+
+app = FastAPI(
+    title="Knowledge Explorer API",
+    description="AI-powered knowledge explorer backend",
+    version="1.0.0",
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173", "http://localhost:3000"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+app.include_router(articles.router)
+app.include_router(ask.router)
+
+
+@app.get("/")
+def root():
+    return {"message": "Knowledge Explorer API is running"}

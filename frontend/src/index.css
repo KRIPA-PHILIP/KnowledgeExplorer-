@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@400;600;700;800&display=swap');
+@import "tailwindcss";
+
+
+
+/* Full width root */
+html, body, #root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #0a0a0f;
+  color: white;
+  font-family: 'Inter', sans-serif;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* Header spacing */
+header {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* Main page wrapper */
+main {
+  width: 100%;
+  padding: 20;
+}
+
+/* Article list page */
+.page-container {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 100px;
+}
+
+/* Individual article cards */
+.article-card {
+  padding: 100px;
+  border-radius: 1rem;
+}
+
+/* Chat panel */
+.chat-panel {
+  padding: 0;
+}
+
+/* Chat messages */
+.chat-message {
+  padding: 0.75rem 1rem;
+}
